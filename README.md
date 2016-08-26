@@ -20,6 +20,7 @@ The following VMs are created by the ```Vagrantfile```
 | rancher-agent3 | 192.168.33.103 | 1.0 | Hosts the rancher-agent container |
 
 __note 1__: networking is set to ```host only```
+
 __note 2__: RAM requirements are for Rancher to run and for the agents to support database containers with
 certain RAM requirements (MySQL, etc)
 
