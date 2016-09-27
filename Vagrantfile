@@ -20,12 +20,11 @@ def createRancherMachine (vagrant, config)
   hostname = config[:hostname]
   role = config[:role]
   isServerRole = (role == "server")
-  puts isServerRole
 
   vagrant.vm.define hostname do |machine|
     machine.vm.hostname = hostname
     machine.vm.network "private_network", ip: config[:ip].to_s
-
+    machine.vm.synced_folder "./data/#{hostname}", "/vagrant", create: true
     machine.vm.provider "virtualbox" do |vb|
       vb.memory = config[:memory]
     end
@@ -33,7 +32,6 @@ def createRancherMachine (vagrant, config)
     machine.vm.provision :docker
 
     machine.vm.provision :rancher do |rancher|
-      puts "here"
       rancher.version = "v1.1.1"
       rancher.hostname = config[:rancherServerIp].to_s
       rancher.port = 8080
