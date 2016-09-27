@@ -24,6 +24,11 @@ __note 1__: networking is set to ```host only```
 __note 2__: RAM requirements are for Rancher to run and for the agents to support database containers with
 certain RAM requirements (MySQL, etc)
 
+### Sync Folders
+
+The __/vagrant__ directory on each machine is mapped to __/data/<machine-hostname>__ on the host
+
+
 ### Usage
 
 - ```vagrant up``` :]
