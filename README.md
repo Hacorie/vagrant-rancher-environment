@@ -26,7 +26,7 @@ certain RAM requirements (MySQL, etc)
 
 ### Sync Folders
 
-The __/vagrant__ directory on each machine is mapped to __/data/<machine-hostname>__ on the host
+The __/vagrant__ directory on each machine is mapped to __/data/\<machine-hostname>\__ on the host
 
 
 ### Usage
